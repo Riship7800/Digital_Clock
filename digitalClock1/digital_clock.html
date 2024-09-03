@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital-Clock</title>
+    <style>
+    body{
+    background-color: #212121;
+    color: #fff;
+    }
+    .container{
+        height: 100vh;
+        width: 100%;
+        background: linear-gradient(45deg,#654ea3,#eaafc8,#fffbd5,#b20a2c);
+        background-size: 300% 300%;
+        animation: color 12s ease-in-out infinite;
+    }
+    @keyframes color{
+        0%{
+            background-position: 0 50%;
+        }
+        50%{
+            background-position: 100% 50%;
+        }
+        100%{
+            background-position: 0 50%;
+        }
+    }
+    .centre{
+    display: flex;
+    height: 90vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    }
+    #clock{
+    font-size: 40px;
+    background-color: orange;
+    padding: 20px 50px;
+    margin-top: 10px;
+    border-radius: 10px;
+    }
+    #banner{
+        color: black;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="centre">
+            <div id="banner"><span>Our local-time</span></div>
+            <div id="clock"></div>
+        </div>
+    </div>
+    
+    <script src="digital_clock.js"></script>
+</body>
+</html>
